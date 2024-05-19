@@ -1,8 +1,8 @@
-import User from "../models/user.js"
+import User from "../models/user.js";
 
 const getCurrentUser = async (req,res) =>{
     try {
-        const currentUser = await User.findOne({_id:req.userid});
+        const currentUser = await User.findOne({_id:req.userId});
         if (!currentUser) {
             return res.status(404).json({message:"User not Found"});
         }
@@ -34,7 +34,7 @@ const createCurrentUser = async (req,res) => {
 const updateCurrentUser = async ( req, res) => {
     try {
         const {name, addressLine1, country, city} = req.body;
-        const user = await User.findById(req.userid);
+        const user = await User.findById(req.userId);
 
         if (!user) {
             return res.status(404).json({message:"User not found"});

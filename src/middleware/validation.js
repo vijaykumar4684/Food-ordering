@@ -1,4 +1,4 @@
-import { body, validationResult } from "express-validator"
+import { body, validationResult } from "express-validator";
 
 const handleValidationErrors = async (
     req,
@@ -14,7 +14,7 @@ const handleValidationErrors = async (
 
 export const validateMyUserRequest = [
     body("name").isString().notEmpty().withMessage("Name Must Be a String"),
-    body("addressline1").isString().notEmpty().withMessage("Addressline1 Must Be a String"),
+    body("addressLine1").isString().notEmpty().withMessage("Addressline1 Must Be a String"),
     body("city").isString().notEmpty().withMessage("City Must Be a String"),
     body("country").isString().notEmpty().withMessage("Country Must Be a String"),
     handleValidationErrors,

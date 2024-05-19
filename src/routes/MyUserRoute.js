@@ -1,4 +1,4 @@
-import express from "express"
+import express from "express";
 import { jwtCheck, jwtParse } from "../middleware/auth.js";
 import MyUserController from "../controllers/MyUserController.js";
 import { validateMyUserRequest } from "../middleware/validation.js";
