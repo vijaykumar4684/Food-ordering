@@ -14,6 +14,8 @@ router.get(
   RestaurantController.getRestaurant
 );
 
+router.get("/",RestaurantController.getRestaurants)
+
 router.get(
   "/search/:city",
   param("city")
